@@ -1,0 +1,189 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/* Css Reset */
+*,
+::after,
+::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --white: #fff;
+  --black: #000;
+  --card-img-bg: #f0f1f6;
+  --card1bg: #576aa4;
+  --card2bg: #141414;
+  --card3bg: #c39d6c;
+  --card4bg: #30302e;
+}
+
+.clr_bx {
+  height: 14px;
+  width: 14px;
+  margin-top: -5px;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  padding: 0 2rem;
+}
+
+.collections {
+  /* background: brown; */
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.collections h2 {
+  font-size: 35px;
+  font-weight: 600;
+}
+
+.collections_contents {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 2rem 5rem;
+}
+.inner_collectiondiv {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+}
+.inner_collection_title h4 {
+  font-size: 25px;
+  font-weight: 600;
+}
+.inner_cards {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(17%, 1fr));
+  gap: 15px;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+@media screen and (max-width: 947px) {
+  .inner_cards {
+    grid-template-columns: repeat(2, minmax(17%, 1fr));
+  }
+}
+@media screen and (max-width: 605px) {
+  body {
+    padding: 0 1rem;
+  }
+  .collections_contents {
+    padding: 2rem 2rem;
+  }
+  .inner_collection_title h4 {
+    font-size: 20px;
+  }
+  .typo_titlediv p {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 417px) {
+  .collections h2 {
+    font-size: 25px;
+  }
+  .collections_contents {
+    padding: 2rem 1rem;
+  }
+  .inner_cards {
+    grid-template-columns: repeat(1, minmax(17%, 1fr));
+    /* gap: 30px; */
+  }
+}
+
+.inner_collections_cards {
+  /* background: blueviolet; */
+  justify-content: center;
+  justify-self: center;
+  width: 100%;
+  height: max-content;
+  padding: 6px 6px 0px 6px;
+  border-radius: 5px;
+  transition: 0.3s ease-in-out;
+}
+
+.inner_collections_cards:hover {
+  transform: scale(1.03);
+  box-shadow: 0 5px 10px 0 hsla(0, 0%, 0%, 0.214);
+}
+
+.inner_imgdiv {
+  padding: 15px 25px;
+  width: 100%;
+  background: var(--card-img-bg);
+  border: 1px solid hsla(0, 0%, 0%, 0.338);
+  box-shadow: 0 5px 10px 0 hsla(0, 0%, 0%, 0.214);
+}
+
+.inner_imgdiv img {
+  width: 100%;
+  height: auto;
+  /* width: 130px; */
+}
+
+.innercard_typo {
+  width: 100%;
+  padding: 0.6rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.typo_titlediv {
+  width: 100%;
+  display: flex;
+  gap: 10px;
+}
+
+.typo_titlediv p {
+  font-size: 16px;
+}
+.typo_titlediv div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+/* 
+.typo_titlediv div .clr_bx {
+  background: var(--card1bg);
+}*/
+
+.innercard_typo h4 {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.card_addbtn {
+  height: 47px;
+  background: var(--black);
+  border: none;
+  margin-top: 20px;
+  transition: 0.3s ease-in-out;
+}
+
+.card_addbtn a {
+  color: var(--white);
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.card_addbtn:hover {
+  opacity: 0.8;
+  border-radius: 5px;
+  transform: scale(1.02);
+}
+
+.inner_collections_cards:hover .card_addbtn {
+  opacity: 0.8;
+  border-radius: 5px;
+  transform: scale(1.02);
+}
