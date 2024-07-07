@@ -17,6 +17,7 @@
   --card2bg: #141414;
   --card3bg: #c39d6c;
   --card4bg: #30302e;
+  --navbg: #2d2c2c;
 }
 
 .clr_bx {
@@ -27,14 +28,62 @@
 
 body {
   font-family: "Poppins", sans-serif;
-  padding: 0 2rem;
 }
 
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: var(--navbg);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 2rem;
+  z-index: 200;
+}
+
+.navbar .navlogo {
+  width: 120px;
+}
+
+.navbar .navcart {
+  cursor: pointer;
+  width: 32px;
+  transition: 0.3s ease-in-out;
+}
+
+.navbar .navcart:hover {
+  transform: scale(1.06);
+}
+
+.navbar div {
+  position: relative;
+}
+
+.navbar .cartCAmt {
+  background: var(--black);
+  color: var(--white);
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  /* padding: 0.px 0.1rem; */
+  width: 15px;
+  height: 20px;
+  border-radius: 50%;
+  font-size: 14px;
+  /* text-align: center; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .collections {
   /* background: brown; */
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+  padding: 0 2rem;
+  margin-top: 7rem;
 }
 .collections h2 {
   font-size: 35px;
@@ -66,45 +115,11 @@ body {
   width: 100%;
 }
 
-@media screen and (max-width: 947px) {
-  .inner_cards {
-    grid-template-columns: repeat(2, minmax(17%, 1fr));
-  }
-}
-@media screen and (max-width: 605px) {
-  body {
-    padding: 0 1rem;
-  }
-  .collections_contents {
-    padding: 2rem 2rem;
-  }
-  .inner_collection_title h4 {
-    font-size: 20px;
-  }
-  .typo_titlediv p {
-    font-size: 14px;
-  }
-}
-
-@media screen and (max-width: 417px) {
-  .collections h2 {
-    font-size: 25px;
-  }
-  .collections_contents {
-    padding: 2rem 1rem;
-  }
-  .inner_cards {
-    grid-template-columns: repeat(1, minmax(17%, 1fr));
-    /* gap: 30px; */
-  }
-}
-
 .inner_collections_cards {
-  /* background: blueviolet; */
   justify-content: center;
   justify-self: center;
   width: 100%;
-  height: max-content;
+  height: auto;
   padding: 6px 6px 0px 6px;
   border-radius: 5px;
   transition: 0.3s ease-in-out;
@@ -121,6 +136,8 @@ body {
   background: var(--card-img-bg);
   border: 1px solid hsla(0, 0%, 0%, 0.338);
   box-shadow: 0 5px 10px 0 hsla(0, 0%, 0%, 0.214);
+  /* background: url(./assets/logo.png); */
+  cursor: pointer;
 }
 
 .inner_imgdiv img {
@@ -135,6 +152,11 @@ body {
   display: flex;
   flex-direction: column;
   gap: 8px;
+}
+
+.cardtitle {
+  font-size: 20px;
+  font-weight: bold;
 }
 
 .typo_titlediv {
@@ -168,6 +190,7 @@ body {
   border: none;
   margin-top: 20px;
   transition: 0.3s ease-in-out;
+  cursor: pointer;
 }
 
 .card_addbtn a {
@@ -186,4 +209,49 @@ body {
   opacity: 0.8;
   border-radius: 5px;
   transform: scale(1.02);
+}
+
+@media screen and (max-width: 947px) {
+  .inner_cards {
+    grid-template-columns: repeat(2, minmax(17%, 1fr));
+  }
+}
+@media screen and (max-width: 605px) {
+  .collections {
+    padding: 0 1rem;
+  }
+  .collections_contents {
+    padding: 2rem 2rem;
+  }
+  .inner_collection_title h4 {
+    font-size: 20px;
+  }
+  .typo_titlediv p {
+    font-size: 14px;
+  }
+  .cardtitle {
+    font-size: 17px;
+  }
+}
+
+@media screen and (max-width: 467px) {
+  .collections h2 {
+    font-size: 25px;
+  }
+  .collections_contents {
+    padding: 2rem 0rem;
+  }
+  .inner_cards {
+    /* grid-template-columns: repeat(1, minmax(17%, 1fr)); */
+    /* gap: 30px; */
+  }
+  .cardtitle {
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 395px) {
+  .cardtitle {
+    font-size: 13px;
+  }
 }

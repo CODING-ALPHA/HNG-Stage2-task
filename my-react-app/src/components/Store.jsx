@@ -1,15 +1,18 @@
-import cardPic1 from "./assets/pic1.png";
-import cardPic2 from "./assets/pic2.png";
-import cardPic3 from "./assets/pic3.png";
-import cardPic4 from "./assets/pic4.png";
-import cardPic5 from "./assets/pic5.png";
-import cardPic6 from "./assets/pic6.png";
-import cardPic7 from "./assets/pic7.png";
-import cardPic8 from "./assets/pic8.png";
-import cardPic9 from "./assets/pic5.png";
-import cardPic10 from "./assets/pic6.png";
-import cardPic11 from "./assets/pic7.png";
-import cardPic12 from "./assets/pic8.png";
+import cardPic1 from "../assets/pic1.png";
+import cardPic2 from "../assets/pic2.png";
+import cardPic3 from "../assets/pic3.png";
+import cardPic4 from "../assets/pic4.png";
+import cardPic5 from "../assets/pic5.png";
+import cardPic6 from "../assets/pic6.png";
+import cardPic7 from "../assets/pic7.png";
+import cardPic8 from "../assets/pic8.png";
+import cardPic9 from "../assets/pic5.png";
+import cardPic10 from "../assets/pic6.png";
+import cardPic11 from "../assets/pic7.png";
+import cardPic12 from "../assets/pic8.png";
+import navLogo from "../assets/logo.png";
+import carticon from "../assets/cart-icon.png";
+import { Link } from "react-router-dom";
 
 function ProductCard({ imageSrc, title, shirtType, boxColor, buttonText }) {
   return (
@@ -25,7 +28,7 @@ function ProductCard({ imageSrc, title, shirtType, boxColor, buttonText }) {
             <p>$58</p>
           </div>
         </div>
-        <h4>{title}</h4>
+        <p className="cardtitle">{title}</p>
         <button className="card_addbtn">
           <a href="#">{buttonText}</a>
         </button>
@@ -34,7 +37,7 @@ function ProductCard({ imageSrc, title, shirtType, boxColor, buttonText }) {
   );
 }
 
-function Card() {
+function Store() {
   const cardOneBg = "#576aa4";
   const cardTwoBg = "#141414";
   const cardThreeBg = "#c39d6c";
@@ -50,10 +53,18 @@ function Card() {
 
   return (
     <>
-      <header>
-        <div className="logo_div"></div>
-        <nav></nav>
+      {/* <Navbar></Navbar> */}
+
+      <header className="navbar">
+        <img src={navLogo} className="navlogo" alt="logo image" />
+        <div>
+          <Link to="./Cart">
+            <img src={carticon} className="navcart" alt="cart icon" />
+          </Link>
+          <p className="cartCAmt">3</p>
+        </div>
       </header>
+
       <section className="collections">
         <h2>Explore collections</h2>
         <div className="collections_contents">
@@ -181,7 +192,7 @@ function Card() {
   );
 }
 
-export default Card;
+export default Store;
 
 // import cardPic1 from "./assets/pic1.png";
 // import cardPic2 from "./assets/pic2.png";

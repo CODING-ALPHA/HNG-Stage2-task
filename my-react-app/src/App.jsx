@@ -1,7 +1,12 @@
-import Card from "./Store";
+import { Routes, Route } from "react-router-dom";
+import Store from "./components/Store";
 
 function App() {
-  return <Card />;
+  return (
+    <>
+      <Store />
+    </>
+  );
 }
 
 export default App;
