@@ -277,11 +277,15 @@ body {
   padding: 1.5rem;
   width: 100%;
   overflow: scroll;
+  position: relative;
+}
+.Shpcart_cont_1::-webkit-scrollbar {
+  display: none;
 }
 
 .Shpcart_cont_1_title {
-  padding: 0.5rem;
-  border-bottom: 1px solid hsla(0, 0%, 0%, 0.338);
+  padding: 0.5rem 0.5rem 0.5rem 0;
+  /* border-bottom: 1px solid hsla(0, 0%, 0%, 0.338); */
 }
 
 .Shpcart_cont_1_title h4 {
@@ -307,7 +311,7 @@ body {
 }
 
 hr {
-  width: 92%;
+  width: 83%;
   border: 0;
   border-bottom: 1px solid hsla(0, 0%, 0%, 0.338);
 }
@@ -415,6 +419,11 @@ hr {
   left: 0;
 }
 
+.full_hr {
+  width: 100%;
+  position: absolute;
+  left: 0;
+}
 .Shpcartcont2 h4 {
   font-size: 35px;
   font-weight: 600;
@@ -473,6 +482,7 @@ hr {
 
 .shop_contdiv {
   padding: 1rem 2rem;
+  margin-top: 20px;
 }
 
 .shop_contdiv div {
@@ -545,5 +555,142 @@ hr {
   }
   .cont_typodiv1 {
     gap: 5px;
+  }
+}
+
+.checkoutdiv {
+  width: 50%;
+  background-color: var(--Cartbg);
+  padding: 2rem 1.5rem;
+}
+
+.payment_div {
+  position: relative;
+}
+.payment_div h4 {
+  font-size: 35px;
+  font-weight: 600;
+}
+.payment_div .type_div {
+  text-align: center;
+  margin-bottom: 5rem;
+}
+.payment_div .type_div h5 {
+  text-align: start;
+  margin-bottom: 20px;
+}
+.payment_div form {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.payment_div form input {
+  width: 100%;
+  height: 35px;
+  outline: none;
+}
+.payment_div form div {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.payment_div h5 {
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.payment_div form .exp_cvv {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.payment_div form .exp_cvv div {
+  width: 100%;
+  text-align: start;
+  justify-content: start;
+  align-items: start;
+}
+
+.btn_hr {
+  /* position: absolute; */
+  width: 100%;
+  margin-top: 4rem;
+}
+
+.checkout_btn {
+  background-color: var(--black);
+  border: none;
+  height: 45px;
+  color: var(--white);
+  font-size: 18px;
+  font-weight: 500;
+  margin-top: 0.5rem;
+}
+
+.checkout_btn span {
+  font-weight: 700;
+}
+
+.ffg {
+  /* background: red; */
+  /* justify-content: ; */
+  gap: 10rem;
+}
+
+.ffg3 {
+  width: 100%;
+}
+.ffg2 {
+  flex-direction: row;
+}
+.ffg4 {
+  display: flex;
+  /* gap: 10px; */
+}
+
+@media screen and (max-width: 1075px) {
+  .ffg2 {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .ffg {
+    justify-content: space-between;
+    gap: 0;
+  }
+
+  .ffg4 p:last-child {
+    background: #000;
+    display: none;
+  }
+}
+.ffg4 {
+  display: flex;
+  width: max-content;
+}
+
+@media screen and (max-width: 745px) {
+  .checkoutdiv {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 376px) {
+  .payment_div form .exp_cvv {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .check_h2 {
+    font-size: 25px !important;
+  }
+  .check_h4 {
+    font-size: 18px !important;
   }
 }

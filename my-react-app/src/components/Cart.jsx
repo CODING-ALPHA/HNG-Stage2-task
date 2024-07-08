@@ -19,7 +19,7 @@ function Navbar() {
     <header className="navbar">
       <img src={navLogo} className="navlogo" alt="logo image" />
       <div>
-        <Link to="./Cart">
+        <Link to="/Cart">
           <img src={carticon} className="navcart" alt="cart icon" />
         </Link>
         <p className="cartCAmt">3</p>{" "}
@@ -77,8 +77,9 @@ function Cart() {
         <div className="Shpcart_cont">
           <div className="Shpcart_cont_1">
             <div className="Shpcart_cont_1_title">
-              <h4 className="cart_title">Select items To Checkout</h4>
+              <h4 className="cart_title">Select Items To Checkout</h4>
             </div>
+            <hr className="full_hr" />
             <div className="cont1_itmdiv">
               <CartItem itempic={itempic1} title="Grey slim T-shirt" />
               <CartItem itempic={itempic2} title="Brown slim T-shirt" />
@@ -113,15 +114,16 @@ function Cart() {
             <hr className="cont2_hr" />
 
             <div className="info_btn">
-              <button>
-                <Link
-                  to="./CheckOut.jsx"
-                  style={{ textDecoration: "none", color: "var(--white)" }}
-                >
-                  {" "}
-                  CHECK OUT
-                </Link>
-              </button>
+              <Link
+                to="/CheckOut"
+                style={{
+                  textDecoration: "none",
+                  color: "var(--white)",
+                  background: "yellow",
+                }}
+              >
+                <button>CHECK OUT</button>
+              </Link>
             </div>
           </div>
         </div>
