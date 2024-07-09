@@ -8,13 +8,10 @@ import itempic3 from "../assets/pic10.png";
 import plusicon from "../assets/plus icon.png";
 import minusicon from "../assets/minus icon.png";
 import arwlfticon from "../assets/arrow left.png";
-// import Store from "./Store.jsx";
 import { Link } from "react-router-dom";
 
 // Function for the Navbar component
 function Navbar() {
-  // const navLogo = "../assets/logo.png"; // Assuming image path
-  // const carticon = "../assets/cart-icon.png"; // Assuming image path
   return (
     <header className="navbar">
       <img src={navLogo} className="navlogo" alt="logo image" />
@@ -23,7 +20,6 @@ function Navbar() {
           <img src={carticon} className="navcart" alt="cart icon" />
         </Link>
         <p className="cartCAmt">3</p>{" "}
-        {/* Replace with actual cart item count */}
       </div>
     </header>
   );
@@ -121,6 +117,7 @@ function Cart() {
                   color: "var(--white)",
                   background: "yellow",
                 }}
+                y
               >
                 <button>CHECK OUT</button>
               </Link>
@@ -142,109 +139,3 @@ function Cart() {
 }
 
 export default Cart;
-
-// import React from "react";
-// import navLogo from "../assets/logo.png";
-// import carticon from "../assets/cart-icon.png";
-// import { Link } from "react-router-dom";
-// import checkbxicon from "../assets/checkbx.png";
-// import itempic1 from "../assets/pic4.png";
-// import plusicon from "../assets/plus icon.png";
-// import minusicon from "../assets/minus icon.png";
-
-// function Cart() {
-//   return (
-//     <>
-//       <header className="navbar">
-//         <img src={navLogo} className="navlogo" alt="logo image" />
-//         <div>
-//           <Link to="./Cart">
-//             <img src={carticon} className="navcart" alt="cart icon" />
-//           </Link>
-//           <p className="cartCAmt">3</p>
-//         </div>
-//       </header>
-//       {/* -----------------section */}
-//       <section className="Cart_section">
-//         <h2>Shopping Cart</h2>
-//         <div className="Shpcart_cont">
-//           <div className="Shpcart_cont_1">
-//             <div className="Shpcart_cont_1_title">
-//               <h4>Select items</h4>
-//             </div>
-//             <div className="cont1_itmdiv">
-//               <div className="div">
-//                 <div className="cont1_itm1">
-//                   <div className="checkicon_div">
-//                     <img src={checkbxicon} alt="checkbox icon" />
-//                   </div>
-//                   <div className="cont1_typo">
-//                     <div className="cont_typodiv1">
-//                       <div className="item_imgdiv">
-//                         <img
-//                           src={itempic1}
-//                           className="itm_img"
-//                           alt="itm image"
-//                         />
-//                       </div>
-//                       <div className="typo_div">
-//                         <p>Vintage tee</p>
-//                         <h4>Basic slim T-shirt</h4>
-//                         <p>Remove</p>
-//                       </div>
-//                     </div>
-//                     <div className="itm_amt">
-//                       <img src={minusicon} alt="" />
-//                       <span className="itm_amt_count">1</span>
-//                       <img src={plusicon} alt="" />
-//                     </div>
-//                   </div>
-//                   <div className="itm_pricediv">
-//                     <p>$58.90</p>
-//                     <p>$58.90</p>
-//                   </div>
-//                 </div>
-//                 <hr />
-//               </div>
-//               {/* -------------------------------------------------------- */}
-//               <div className="cont1_itm1">
-//                 <div className="checkicon_div">
-//                   <img src={checkbxicon} alt="checkbox icon" />
-//                 </div>
-
-//                 <div className="cont1_typo">
-//                   <div className="cont_typodiv1">
-//                     <div className="item_imgdiv">
-//                       <img src={itempic1} className="itm_img" alt="itm image" />
-//                     </div>
-//                     <div className="typo_div">
-//                       <p>Vintage tee</p>
-//                       <h4>Basic slim T-shirt</h4>
-//                       <p>Remove</p>
-//                     </div>
-//                   </div>
-
-//                   <div className="itm_amt">
-//                     <img src={minusicon} alt="" />
-//                     <span className="itm_amt_count">1</span>
-//                     <img src={plusicon} alt="" />
-//                   </div>
-//                 </div>
-//                 <div className="itm_pricediv">
-//                   <p>$58.90</p>
-//                   <p>$58.90</p>
-//                 </div>
-//               </div>
-//             </div>
-//             {/* <hr /> */}
-//           </div>
-//           <div className="Shpcartcont2">
-//             hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh
-//           </div>
-//         </div>
-//       </section>
-//     </>
-//   );
-// }
-
-// export default Cart;

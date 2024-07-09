@@ -621,17 +621,29 @@ hr {
 }
 
 .checkout_btn {
-  background-color: var(--black);
   border: none;
-  height: 45px;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
   color: var(--white);
-  font-size: 18px;
+  background: transparent;
   font-weight: 500;
+  font-size: 18px;
+  height: 45px;
   margin-top: 0.5rem;
+  background-color: var(--black);
+  transition: 0.3s ease;
 }
 
 .checkout_btn span {
   font-weight: 700;
+  margin-left: 5px;
+}
+
+.checkout_btn:hover {
+  transform: scale(0.9);
 }
 
 .ffg {

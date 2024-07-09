@@ -6,10 +6,10 @@ import cardPic5 from "../assets/pic5.png";
 import cardPic6 from "../assets/pic6.png";
 import cardPic7 from "../assets/pic7.png";
 import cardPic8 from "../assets/pic8.png";
-import cardPic9 from "../assets/pic5.png";
-import cardPic10 from "../assets/pic6.png";
-import cardPic11 from "../assets/pic7.png";
-import cardPic12 from "../assets/pic8.png";
+import cardPic9 from "../assets/pic12.png";
+import cardPic10 from "../assets/pic13.png";
+import cardPic11 from "../assets/pic14.png";
+import cardPic12 from "../assets/pic15.png";
 import navLogo from "../assets/logo.png";
 import carticon from "../assets/cart-icon.png";
 import { Link } from "react-router-dom";
@@ -83,7 +83,7 @@ function Store() {
               {/* -------Card2 */}
               <ProductCard
                 imageSrc={cardPic2}
-                title="Basic slim T-shirt"
+                title="Black slim T-shirt"
                 shirtType="Vintage tee"
                 boxColor={cardTwoBg}
                 buttonText="Add To Cart"
@@ -91,7 +91,7 @@ function Store() {
               {/* ---------Card3 */}
               <ProductCard
                 imageSrc={cardPic3}
-                title="Basic slim T-shirt"
+                title="Brown slim T-shirt"
                 shirtType="Vintage tee"
                 boxColor={cardThreeBg}
                 buttonText="Add To Cart"
@@ -99,7 +99,7 @@ function Store() {
               {/* ---------Card4 */}
               <ProductCard
                 imageSrc={cardPic4}
-                title="Basic slim T-shirt"
+                title="Grey slim T-shirt"
                 shirtType="Vintage tee"
                 boxColor={cardFourBg}
                 buttonText="Add To Cart"
@@ -155,33 +155,33 @@ function Store() {
             <div className="inner_cards">
               <ProductCard
                 imageSrc={cardPic9}
-                title="Basic Patchwork T-shirt"
-                shirtType="Patchwork tee"
+                title="Basic Racing T-shirt"
+                shirtType="Basic Racing"
                 boxColor={cardFiveBg}
                 buttonText="Add To Cart"
               />
               {/* -------Card2 */}
               <ProductCard
                 imageSrc={cardPic10}
-                title="Basic Blackair T-shirt"
-                shirtType="Blackair tee"
-                boxColor={cardSixBg}
+                title="Basic Washed T-shirt"
+                shirtType="Basic Washed"
+                boxColor={cardThreeBg}
                 buttonText="Add To Cart"
               />
               {/* ---------Card3 */}
               <ProductCard
                 imageSrc={cardPic11}
-                title="Eastern V up and down"
-                shirtType="Eastern V"
+                title="Ma 1 Puffer Jacket"
+                shirtType="Ma 1 Puffer"
                 boxColor={cardSevenBg}
                 buttonText="Add To Cart"
               />
               {/* ---------Card4 */}
               <ProductCard
                 imageSrc={cardPic12}
-                title="Casual Shinko jacket"
-                shirtType="Shinko jacket"
-                boxColor={cardEightBg}
+                title="Gauel Stock Jacket"
+                shirtType="Gauel Stock"
+                boxColor={cardSevenBg}
                 buttonText="Add To Cart"
               />
             </div>

@@ -1,15 +1,11 @@
 import React from "react";
 import navLogo from "../assets/logo.png";
 import carticon from "../assets/cart-icon.png";
-import checkbxicon from "../assets/checkbx.png";
 import itempic1 from "../assets/pic11.png";
 import itempic2 from "../assets/pic9.png";
 import itempic3 from "../assets/pic10.png";
-import plusicon from "../assets/plus icon.png";
-import minusicon from "../assets/minus icon.png";
 import arwlfticon from "../assets/arrow left.png";
 import cardtype from "../assets/card type.png";
-// import Store from "./Store.jsx";
 
 import { Link } from "react-router-dom";
 
@@ -23,7 +19,6 @@ function Navbar() {
           <img src={carticon} className="navcart" alt="cart icon" />
         </Link>
         <p className="cartCAmt">3</p>{" "}
-        {/* Replace with actual cart item count */}
       </div>
     </header>
   );
@@ -104,10 +99,9 @@ function CheckOut() {
                   </div>
                 </div>
                 <hr className="btn_hr" />
-
-                <button type="submit" className="checkout_btn">
+                <Link to="/" className="checkout_btn">
                   Pay <span>$176.7</span>
-                </button>
+                </Link>
               </form>
             </div>
           </section>
